@@ -1,3 +1,12 @@
 .App {
-  text-align: center;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.nav {
+  list-style-type: none;
+  width: 550px;
+  display: flex;
+  justify-content: space-evenly;
 }
