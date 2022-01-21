@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Profile from './pages/Profile';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import Post from './pages/Post';
 
 const App=()=> {
   return (
@@ -19,7 +20,10 @@ const App=()=> {
         <Route exact path="/" component={Home} />{/*exact --> yalnızca "/" olduğunda bu sayfaya gitme işlemi sağlar  */}
         <Route path="/about" component={About} />
         <Route path="/profile" component={Profile} />
-        <Route component={NotFound} />{/*Url yanlış yazıldığında yönlendirilecek sayfa path bilirtilmiyor*/}
+        <Route path="/post/:id" component={Post} />{/* id yakalam işlemini yapmış olduk path="/Post/:id" path bu şekilde verilmeli */}
+
+        <Route component={NotFound} />{/*Url yanlış yazıldığında yönlendirilecek sayfa path bilirtilmiyor
+        bu sayfa en sonda olur*/}
 
         {/*<Route path="/" component={Home} />  exact a alternatif yöntem "/" ile ulaşılan sayfayı en sona koymak*/}
       </Switch>
